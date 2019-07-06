@@ -66,4 +66,4 @@ echo
 echo
 echo "loading up IPTV Admin panel"
 echo "keep this console open"
-./server.py
+cd && ./iptv_project/iptv_admin/server.py
