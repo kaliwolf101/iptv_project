@@ -43,7 +43,7 @@ echo "The task is in progress, please wait a few seconds"
 echo "going to download iptv_admin files from git"
 echo
 progress 10 "Initialize"
-echo
+cd /
 progress 15 "Phase 2"
 git clone https://github.com/fastogt/iptv_admin
 sleep 1
