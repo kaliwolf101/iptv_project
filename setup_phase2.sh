@@ -57,8 +57,8 @@ pip3 install -r requirements.txt
 #
 progress 80 "Processing..."
 #
-progress 90 "Processing..."
-#
+progress 90 "Creating an admin user"
+./iptv_project/iptv_admin/scripts/create_provider.py --email=test@example.com --password=1234567
 progress 100 "iptv_admin panel ready to start"
 #
 echo
