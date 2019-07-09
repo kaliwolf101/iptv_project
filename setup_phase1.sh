@@ -1,8 +1,8 @@
 #! /bin/sh
-
 #run as root
 #set -ex
 #progress code
+
 function delay()
 {
     sleep 0.2;
@@ -41,6 +41,7 @@ function progress()
     CURRENT_PROGRESS=$PARAM_PROGRESS;
 
 }
+
 #end of progress code
 #################################### INFO ######################################
 
