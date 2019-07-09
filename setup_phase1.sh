@@ -1,8 +1,7 @@
-
 #! /bin/sh
 
 #run as root
-set -ex
+#set -ex
 #progress code
 function delay()
 {
