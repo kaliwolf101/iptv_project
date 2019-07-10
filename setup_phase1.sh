@@ -1,4 +1,4 @@
-#! /bin/sh
+#!/bin/sh
 #run as root
 #set -ex
 #progress code
