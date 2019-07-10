@@ -144,8 +144,8 @@ echo
 echo "Processing requirements"
 pip3 install -r requirements.txt
 #
-
-#creating admin user to log in to web panel
+sleep 5
+#creating admin user to log in to web panel - replace test@example.com and 1234567 with your email and 7 character password below or leave default
 progress 90 "Creating an admin user"
 ./scripts/create_provider.py --email=test@example.com --password=1234567
 
