@@ -1,7 +1,16 @@
 #!/bin/sh
-#run as root
-#set -ex
-#progress code
+
+
+################################### NOTES  ###########################################################################
+#   ****  DISCLAIMER:  THIS IS PROVIDED AS OPENSOURCE PRODUCT AND IS UNDER DEVELOPEMENT.  RUN AT YOUR OWN RISK.  ****
+
+# This is an bash script to install fastogt to a fresh ubuntu server.  
+# You must run the Script as root <su root>
+# Load script to your root@/home/user directory, <wget https://raw.githubusercontent.com/gear259/iptv_project/master/clean_install.sh
+# Run command bash ./clean_install.sh
+
+####################################  Progress Code   ################################################################
+
 
 function delay()
 {
@@ -43,9 +52,10 @@ function progress()
 }
 
 #end of progress code
+#set -ex
 #################################### INFO ######################################
 
-# This is the first script PHASE 1 for installing IPTV
+# This is the first script phase for installing IPTV BACKEND server
 
 ################################################################################
 
@@ -114,7 +124,12 @@ LICENSE_KEY=$(license_gen)
 # add user
 useradd -m -U -d /home/$USER $USER -s /bin/bash
 
-#phase2
+#################################### INFO ######################################
+
+# This is the second script phase for installing IPTV FRONT-END (UI) server
+
+################################################################################
+
 echo "going to download iptv_admin files from git"
 echo
 progress 60 "Initialize"
