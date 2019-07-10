@@ -98,6 +98,7 @@ sleep 5
 #
 echo "Fetching your key"
 echo "your unique license key is below. Copy it to a notepad and then append to server you setup up in panel for activation"
+license_gen
 license_gen >> iptv_project/key.txt
 sleep 4
 echo
