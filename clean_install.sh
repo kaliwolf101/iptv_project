@@ -137,7 +137,8 @@ progress 60 "Initialize"
 progress 70 "Phase 2"
 sleep 1
 progress 80 "processing files"
-cd home/user/iptv_project/iptv_admin
+#move from iptv_project/iptv/build to iptv_project/iptv_admin
+cd /iptv_admin
 git submodule update --init --recursive
 echo
 echo "Processing requirements"
@@ -156,7 +157,7 @@ echo
 echo
 echo "loading up IPTV Admin panel"
 echo "keep this console open"
-cd
+
 systemctl enable streamer_service.service
 systemctl start streamer_service.service
-./home/user/iptv_project/iptv_admin/server.py
+./server.py
