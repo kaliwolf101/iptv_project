@@ -9,14 +9,6 @@
 # Load script to your root@/home/user directory, <wget https://raw.githubusercontent.com/gear259/iptv_project/master/clean_install.sh
 # Run command bash ./clean_install.sh
 
-####################################  Progress Code   ################################################################
-
-
-function delay()
-{
-    sleep 0.2;
-}
-
 
 #set -ex
 #################################### INFO ######################################
