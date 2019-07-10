@@ -68,7 +68,7 @@ apt-get install -y git python3-setuptools python3-pip mongodb --no-install-recom
 echo "Dependencies installed"
 
 #make the files
-cd /
+cd /home/user
 mkdir iptv_project
 cd iptv_project
 progress 20 "Downloading iptv files from github"
