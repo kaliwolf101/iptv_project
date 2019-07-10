@@ -83,7 +83,7 @@ echo "Success"
 
 #pre-build
 #progress 30 "Changing Directory"
-#cd build
+cd build
 
 # install pyfastogt
 progress 35 "Downloading pyfastogt from github"
@@ -99,7 +99,7 @@ rm -rf pyfastogt
 # build env for service
 progress 50 "Processing Build Package"
 echo "This will take a long time. If running, come back in 15 minutes and check on progress"
-./home/user/iptv_project/iptv/build/build_env.py
+./build_env.py
 
 echo "Build Package Installed"
 echo "Did you fall asleep waiting?  Nearly done now, lets get the key"
@@ -109,7 +109,7 @@ echo "your unique license key is below. Copy it to a notepad and then append to 
 
 # build service with key
 LICENSE_KEY=$(license_gen)
-./home/user/iptv_project/iptv/build/build.py release $LICENSE_KEY
+./build.py release $LICENSE_KEY
 
 # add user
 useradd -m -U -d /home/$USER $USER -s /bin/bash
@@ -122,7 +122,7 @@ progress 60 "Initialize"
 progress 70 "Phase 2"
 sleep 1
 progress 80 "processing files"
-cd iptv_admin
+cd home/user/iptv_prjoect/iptv_admin
 git submodule update --init --recursive
 echo
 echo "Processing requirements"
@@ -131,7 +131,7 @@ pip3 install -r requirements.txt
 
 #creating admin user to log in to web panel
 progress 90 "Creating an admin user"
-./home/user/iptv_project/iptv_admin/scripts/create_provider.py --email=test@example.com --password=1234567
+./scripts/create_provider.py --email=test@example.com --password=1234567
 
 
 progress 100 "iptv_admin panel ready to start"
