@@ -1,6 +1,6 @@
-# iptv_project
+# iptv_project FASTOGT
 
-# Install backend and front-end using this bash script
+# Auto-Install Backend and Front-end using this bash script
 
 # Code:
 su root
