@@ -86,14 +86,13 @@ useradd -m -U -d /home/$USER $USER -s /bin/bash
 # This is the second script phase for installing IPTV FRONT-END (UI) server
 
 ################################################################################
-
-echo "going to download iptv_admin files from git"
-echo
-
-sleep 1
+echo "iptv backend completed"
+sleep 2
 
 #move from iptv_project/iptv/build to iptv_project/iptv_admin
+
 cd /iptv_admin
+sleep 1
 git submodule update --init --recursive
 echo
 echo "Processing requirements"
