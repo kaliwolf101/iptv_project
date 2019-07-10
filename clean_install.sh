@@ -89,11 +89,9 @@ useradd -m -U -d /home/$USER $USER -s /bin/bash
 
 echo "going to download iptv_admin files from git"
 echo
-progress 60 "Initialize"
 
-progress 70 "Phase 2"
 sleep 1
-progress 80 "processing files"
+
 #move from iptv_project/iptv/build to iptv_project/iptv_admin
 cd /iptv_admin
 git submodule update --init --recursive
@@ -103,11 +101,9 @@ pip3 install -r requirements.txt
 #
 sleep 5
 #creating admin user to log in to web panel - replace test@example.com and 1234567 with your email and 7 character password below or leave default
-progress 90 "Creating an admin user"
+
 ./scripts/create_provider.py --email=test@example.com --password=1234567
 
-
-progress 100 "iptv_admin panel ready to start"
 #
 echo "Fetching your key"
 echo "your unique license key is below. Copy it to a notepad and then append to server you setup up in panel for activation"
