@@ -137,7 +137,7 @@ progress 60 "Initialize"
 progress 70 "Phase 2"
 sleep 1
 progress 80 "processing files"
-cd home/user/iptv_prjoect/iptv_admin
+cd home/user/iptv_project/iptv_admin
 git submodule update --init --recursive
 echo
 echo "Processing requirements"
