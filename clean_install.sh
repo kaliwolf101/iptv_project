@@ -4,7 +4,7 @@
 ################################### NOTES  ###########################################################################
 #   ****  DISCLAIMER:  THIS IS PROVIDED AS OPENSOURCE PRODUCT AND IS UNDER DEVELOPEMENT.  RUN AT YOUR OWN RISK.  ****
 
-# This is an bash script to install fastogt to a fresh ubuntu server.  
+# This is a bash script to install fastogt to a fresh ubuntu server.  
 # You must run the Script as root <su root>
 # Load script to your root@/home/user directory, <wget https://raw.githubusercontent.com/gear259/iptv_project/master/clean_install.sh
 # Run command bash ./clean_install.sh
@@ -13,7 +13,7 @@
 #set -ex
 #################################### INFO ######################################
 
-# This is the first script phase for installing IPTV BACKEND server
+# This is the first script phase for installing IPTV BACKEND server FastoCloud
 
 ################################################################################
 
@@ -37,11 +37,11 @@ echo "Dependencies installed"
 cd /home/user
 mkdir iptv_project
 cd iptv_project
-git clone https://github.com/fastogt/iptv
+git clone https://github.com/fastogt/fastocloud
 git clone https://github.com/fastogt/iptv_admin
 
 # sync modules
-cd iptv
+cd fastocloud
 git submodule update --init --recursive
 echo "Success"
 
@@ -97,7 +97,7 @@ sleep 5
 
 #
 echo "Fetching your key"
-echo "your unique license key is below. Copy it to a notepad and then append to server you setup up in panel for activation"
+echo "your unique license key is below. Copy it to a notepad and then insert key to Server Activation in Admin Panel"
 license_gen
 license_gen >> iptv_project/key.txt
 sleep 4
@@ -106,6 +106,6 @@ echo
 echo "loading up IPTV Admin panel"
 echo "keep this console open"
 
-systemctl enable streamer_service.service
-systemctl start streamer_service.service
+systemctl enable fastocloud.service
+systemctl start fastocloud.service
 ./server.py
