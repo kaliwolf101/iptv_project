@@ -83,7 +83,7 @@ sleep 2
 
 #move from iptv_project/iptv/build to iptv_project/iptv_admin
 
-cd /iptv_admin
+cd iptv_project/iptv_admin
 sleep 1
 git submodule update --init --recursive
 echo
