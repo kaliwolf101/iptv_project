@@ -1,6 +1,6 @@
 # iptv_project FASTOGT
 
-# Auto-Install Backend (iptv) and Front-end (iptv_admin) using this bash script
+# Auto-Install Backend (FastoCloud) and Front-end (iptv_admin) using this bash script
 
 # Code:
 su root
