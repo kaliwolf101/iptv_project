@@ -26,7 +26,7 @@ progress 0 "Initialize"
 export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/lib/pkgconfig
 
 # variables
-USER=iptv_cloud
+USER=fastocloud
 
 # update system and prepare dependencies
 apt-get update
