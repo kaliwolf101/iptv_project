@@ -81,8 +81,9 @@ useradd -m -U -d /home/$USER $USER -s /bin/bash
 echo "iptv backend completed"
 sleep 2
 
-#move from iptv_project/iptv/build to iptv_project/iptv_admin
-
+#move from iptv_project/fastocloud/build to iptv_project/iptv_admin
+cd ..
+cd ..
 cd iptv_project/iptv_admin
 sleep 1
 git submodule update --init --recursive
