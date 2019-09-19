@@ -82,8 +82,8 @@ echo "iptv backend completed"
 sleep 2
 
 #move from iptv_project/fastocloud/build to iptv_project/iptv_admin
-cd ..
-cd ..
+cd /
+cd
 cd iptv_project/iptv_admin
 sleep 1
 git submodule update --init --recursive
@@ -100,7 +100,7 @@ sleep 5
 echo "Fetching your key"
 echo "your unique license key is below. Copy it to a notepad and then insert key to Server Activation in Admin Panel"
 license_gen
-license_gen >> iptv_project/key.txt
+license_gen >> key.txt
 sleep 4
 echo
 echo
