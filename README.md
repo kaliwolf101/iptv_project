@@ -16,3 +16,11 @@ wget https://raw.githubusercontent.com/gear259/iptv_project/master/clean_install
 screen
 cd /fastocloud_admin
 ./server.py
+
+# or 
+
+nohup ./iptv_project/FastoCloud_admin/server.py &
+
+# or
+
+nohup ./iptv_project/iptv_admin/server.py &
