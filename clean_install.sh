@@ -38,7 +38,7 @@ cd /home/user
 mkdir iptv_project
 cd iptv_project
 git clone https://github.com/fastogt/fastocloud
-git clone https://github.com/fastogt/iptv_admin
+git clone https://github.com/fastogt/fastocloud_admin
 
 # sync modules
 cd fastocloud
@@ -81,16 +81,18 @@ useradd -m -U -d /home/$USER $USER -s /bin/bash
 echo "iptv backend completed"
 sleep 2
 
-#move from iptv_project/fastocloud/build to iptv_project/iptv_admin
+#move from iptv_project/fastocloud/build to iptv_project/fastocloud_admin
 cd /
+sleep 1
 cd
-cd iptv_project/iptv_admin
+cd iptv_project/fastocloud_admin
 sleep 1
 git submodule update --init --recursive
+sleep 1
 echo
 echo "Processing requirements"
+sleep 1
 pip3 install -r requirements.txt
-#
 sleep 5
 #creating admin user to log in to web panel - replace test@example.com and 1234567 with your email and 7 character password below or leave default
 
@@ -100,13 +102,17 @@ sleep 5
 echo "Fetching your key"
 echo "your unique license key is below. Copy it to a notepad and then insert key to Server Activation in Admin Panel"
 license_gen
+sleep 1
 license_gen >> key.txt
 sleep 4
 echo
 echo
 echo "loading up IPTV Admin panel"
+sleep 1
 echo "keep this console open"
-
+sleep 1
 systemctl enable fastocloud.service
+sleep 1
 systemctl start fastocloud.service
-./server.py
+sleep 1
+nohup ./server.py &
