@@ -19,3 +19,5 @@ cd /fastocloud_admin
 nohup ./iptv_project/FastoCloud_admin/server.py &
 # or
 nohup ./iptv_project/iptv_admin/server.py &
+# To start Subscribers website
+nohup ./server.py --port 8081 &
