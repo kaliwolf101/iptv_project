@@ -34,7 +34,7 @@ apt-get install -y git python3-setuptools python3-pip mongodb --no-install-recom
 echo "Dependencies installed"
 
 #make the files
-cd /home/user
+cd ~/
 mkdir iptv_project
 cd iptv_project
 git clone https://github.com/fastogt/fastocloud
@@ -61,13 +61,16 @@ rm -rf pyfastogt
 # build env for service
 echo "This will take a long time. If running, come back in 15 minutes and check on progress. Starting in 2 seconds."
 sleep 2
-./build_env.py
+./env/build_env.py
 
 echo "Build Package Installed"
 echo "Nearly done now, lets get the key"
 
 # build service with key
-LICENSE_KEY=$(license_gen)
+LICENSE_KEY=$(request_fastogt_license_key --email klentz@kaliwolf.xyz --license_key $(license_gen) --project fastocloud)
+
+sleep 20
+
 ./build.py release $LICENSE_KEY
 
 # add user
